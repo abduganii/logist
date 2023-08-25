@@ -1,0 +1,32 @@
+.ServiceCard {
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(72px);
+    width: 100%;
+    max-width: 324px;
+    padding: 29px 20px 18px 36px;
+
+    &__title {
+        height: 50px;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 25px;
+        opacity: .8;
+    }
+
+    img {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-top: -8px;
+    }
+
+    &:hover {
+        transform: translate(5px, -15px);
+        transition: all .3s ease;
+    }
+}

@@ -1,0 +1,43 @@
+.Statistic {
+    &__Container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 27px !important;
+        margin-bottom: 139px !important;
+    }
+
+    &__left {
+        text-align: end;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__right {
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__title {
+        color: #040D16;
+        font-family: Overpass;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: #040D16;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}

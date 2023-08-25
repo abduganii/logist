@@ -1,0 +1,158 @@
+.Home {
+    &__hero {
+        background: #040D16;
+        padding-bottom: 20px;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-top: -70px;
+
+        &__left {
+            width: 100%;
+            max-width: 596px;
+        }
+
+        &__span {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -0.66px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        &__title {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+            letter-spacing: -3.2px;
+        }
+
+        &__text {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            /* 141.176% */
+            letter-spacing: -0.51px;
+            opacity: 0.6;
+        }
+    }
+
+    &__serive {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__aboutUs {
+        margin-bottom: 94px;
+
+        &__title {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 31px;
+        }
+
+        &__wrap {
+            width: 100%;
+            padding: 44px 44px 80px 49px;
+            display: flex;
+            align-items: flex-start;
+            gap: 100px;
+            border-radius: 7px;
+            background: linear-gradient(0deg, #FFF 0%, #FFF 100%);
+
+
+        }
+
+        &__text {
+            color: #040D16;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+            width: 100%;
+            max-width: 520px;
+        }
+    }
+
+    &__Advantage {
+        margin-bottom: 170px;
+
+        &__title {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+
+        &__text {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            opacity: .4;
+            width: 100%;
+            max-width: 584px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        &__wrap {
+            display: flex;
+
+            justify-content: space-between;
+        }
+    }
+
+    &__contentUs {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin-bottom: 126px !important;
+    }
+
+    &__Partnors {
+        &__title {
+            color: #040D16;
+            text-align: center;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+
+        &__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 70px;
+            margin-bottom: 166px;
+        }
+    }
+}

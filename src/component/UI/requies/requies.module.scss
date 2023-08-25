@@ -1,0 +1,71 @@
+.Requies {
+    border-radius: 22px;
+    background: #FFF;
+    width: calc((100% - 24px) / 2);
+    padding: 57px 49px;
+    padding-right: 73px;
+
+    &__title {
+        color: #040D16;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        text-transform: uppercase;
+        width: 100%;
+        max-width: 323px;
+    }
+
+    &__text {
+        color: #040D16;
+        font-family: Inter;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        opacity: 0.6;
+        margin-top: 12px;
+        margin-bottom: 53px;
+        width: 100%;
+        max-width: 347px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px;
+        margin-bottom: 29px;
+    }
+
+    &__input {
+        border-radius: 7px;
+        border: 1px solid rgba(4, 13, 22, 0.10);
+        background: #FFF;
+        padding: 21px 20px;
+        width: calc((100% - 3px) / 2);
+
+        &:nth-child(5) {
+            width: 100%;
+        }
+
+        &:nth-child(6) {
+            width: 100%;
+            padding-top: 16px;
+        }
+    }
+
+    &__btn {
+        border-radius: 10px;
+        background: #00B207;
+        padding: 15px 40px;
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none;
+    }
+}

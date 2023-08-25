@@ -1,0 +1,21 @@
+@import url("../public/fonts/fonts.css");
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter' !important;
+  background:#F2F2F2;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+}

@@ -1,0 +1,65 @@
+.FlyTime {
+    padding-top: 75px;
+    padding-bottom: 433px;
+    background-image: url('/public/images/image2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 92px;
+
+    &__title {
+        color: #040D16;
+        font-family: Inter;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        opacity: .8;
+        margin-bottom: 26px;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__card {
+        width: 100%;
+        max-width: 470px;
+        border-radius: 6px;
+        background: #FFF;
+        box-shadow: 0px 24px 54px 0px rgba(216, 230, 238, 0.53);
+        padding: 16px 0 30px 24px;
+
+        &__title {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            opacity: .8;
+        }
+
+        &__text {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            opacity: .4;
+        }
+    }
+
+    &__time {
+        color: #040D16;
+        text-align: center;
+        font-family: Inter;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
