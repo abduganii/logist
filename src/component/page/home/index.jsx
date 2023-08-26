@@ -22,6 +22,8 @@ export default function Home() {
             <h3 className={cls.Home__content__span}>Мы обеспечиваем высочайшее качество</h3>
             <h2 className={cls.Home__content__title}>ГРУЗОВЫЕ УСЛУГИ</h2>
             <p className={cls.Home__content__text}> Хороший план, насильственно реализованный сейчас, лучше, чем идеальный план, реализованный на следующей неделе.</p>
+
+              <button className={cls.Home__content__btn}>Расчитать стоимость груза</button>
           </div>
             <img className={cls.Home__content__img} src="/Group1.png" alt="img" />
           </div>
@@ -35,6 +37,11 @@ export default function Home() {
       </div>
       
       <FlyTime />
+      <Container className={cls.Home__contentUs} > 
+       <Requies />
+           <FAQ/>
+   
+      </Container>
       
       <div className={cls.Home__aboutUs} id="aboutus">
         <Container>
@@ -64,12 +71,7 @@ export default function Home() {
 
       <Statistic />
       
-      <Container className={cls.Home__contentUs} > 
-       <Requies />
-           <FAQ/>
-   
-      </Container>
-
+      <div className={cls.Home__Partnors__Container} >
       <Container >
       
         <h3 className={cls.Home__Partnors__title}>Наши клиенты</h3>
@@ -80,6 +82,19 @@ export default function Home() {
         </div>
       </Container>
 
+      </div>
+  
+      <div className={cls.Home__Add}>
+        <Container className={cls.Home__Add__Container} >
+          <div className={cls.Home__Add__content}>
+            <h3 className={cls.Home__Add__title}>Автомобильные
+              грузо-перевозки</h3>
+            <p className={cls.Home__Add__text}>Узбекистан, г. Ташкент 700106, Учтепинский район, улица Лутфий, 13 квартал 23 дом</p>
+          </div>
+
+          <img src="/images/image8.png" alt="img" />
+        </Container>
+          </div>
       <Footer/>
     </>
   );

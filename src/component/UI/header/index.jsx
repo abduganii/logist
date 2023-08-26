@@ -14,8 +14,8 @@ export default function Header() {
                 <a href='/'><Insta/></a>
                 <a href="/"><Telegram/></a>
                 <a href="/"><Facebok/></a>
-                <a href="/">+998 99 888 55 88</a>
-                <a href="/">Email: Info@gmail.com</a>
+                <a href="tel:+998980775225">+998 98 077 52 25</a>
+                <a href="mailto:abc@example.com">Email: Info@gmail.com</a>
                   
               </div>
               <ul className={cls.Header__language}>
@@ -33,7 +33,7 @@ export default function Header() {
                 <a href='/#quation' className={cls.Header__navbar__text}>Вопросы и ответы</a>   
                 <a href='/#content' className={cls.Header__navbar__text}>Контакты</a>   
               </div>
-              <a className={cls.Header__btn} href="/#content">Заказать обратный звонок</a>
+              <a className={cls.Header__btn} href="tel:+998980775225">+998 98 077 52 25</a>
         </div>
    </Container>
   )

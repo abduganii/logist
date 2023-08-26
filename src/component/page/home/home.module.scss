@@ -9,6 +9,7 @@
         align-items: center;
         margin-top: -70px;
 
+
         &__left {
             width: 100%;
             max-width: 596px;
@@ -46,6 +47,22 @@
             /* 141.176% */
             letter-spacing: -0.51px;
             opacity: 0.6;
+        }
+
+        &__btn {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            border-radius: 10000px;
+            background: #00B207;
+            padding: 18px 22px;
+            padding-right: 16px;
+            border: none;
+            margin-top: 37px;
+            animation: glowing 2300ms infinite;
         }
     }
 
@@ -152,7 +169,70 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 70px;
-            margin-bottom: 166px;
+
         }
+
+        &__Container {
+            background-color: #FFF !important;
+            padding-top: 97px !important;
+            padding-bottom: 166px;
+        }
+    }
+
+    &__Add {
+        &__Container {
+
+            display: flex;
+            align-items: center;
+        }
+
+        padding-bottom: 49px;
+        background-color: #049874;
+
+        &__title {
+            width: 100%;
+            max-width: 395px;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 35px;
+        }
+
+        &__text {
+            width: 100%;
+            max-width: 455px;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            opacity: 0.6;
+            margin-top: 19px;
+        }
+    }
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #2ba805;
+        box-shadow: 0 0 10px 5px #2ba805;
+    }
+
+    33% {
+        background-color: #49e819;
+        box-shadow: 0 0 21px 10px #49e819;
+    }
+
+    66% {
+        background-color: #49e819;
+        box-shadow: 0 0 37px 10px #49e819;
+    }
+
+    100% {
+        background-color: #2ba805;
+        box-shadow: 0 0 10px 5px #2ba805;
     }
 }

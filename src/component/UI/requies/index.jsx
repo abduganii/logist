@@ -8,12 +8,11 @@ export default function Requies() {
           <p className={cls.Requies__text}>Рады будем ответить на любые ваши вопросы, пишите нам!</p>
 
           <div className={cls.Requies__form}>
-              <input className={cls.Requies__input} placeholder='Имя' type="text" />
-              <input className={cls.Requies__input} placeholder='Фамилия' type="text" />
-              <input className={cls.Requies__input} placeholder='E-mail' type="email" />
+              <input className={cls.Requies__input} placeholder='Объём груза (м³)' type="text" />
+              <input className={cls.Requies__input} placeholder='Вес груза (кг)' type="text" />
+              <input className={cls.Requies__input} placeholder='Ваше имя' type="text" />
               <input className={cls.Requies__input} placeholder='Телефон номер' type="text" />
-              <input className={cls.Requies__input} placeholder='Название компании' type="text" />
-              <textarea className={cls.Requies__input} placeholder='Детали запроса' ></textarea>
+              <textarea className={cls.Requies__input}  placeholder='Детали запроса' ></textarea>
           </div>
 
           <button className={cls.Requies__btn} type='submit'>Отправить</button>
