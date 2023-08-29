@@ -1,11 +1,16 @@
 .FlyTime {
-    padding-top: 75px;
-    padding-bottom: 433px;
-    background-image: url('/public/images/image2.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding-top: 85px;
+    background: linear-gradient(180deg, #EEF9FF 0%, #EEF9FF 46.18%, #EDF8FE 61.00%, #D9E6EE 100%);
     margin-bottom: 92px;
+
+    &__Images {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 50%;
+        }
+    }
 
     &__title {
         color: #040D16;
@@ -16,12 +21,22 @@
         line-height: normal;
         opacity: .8;
         margin-bottom: 26px;
+
+        @media screen and (max-width:770px) {
+
+            text-align: center;
+        }
     }
 
     &__wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 10px;
+
+        @media screen and (max-width:770px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__card {
@@ -32,6 +47,13 @@
         box-shadow: 0px 24px 54px 0px rgba(216, 230, 238, 0.53);
         padding: 16px 0 30px 24px;
 
+        @media screen and (max-width:770px) {
+            max-width: 100%;
+            text-align: center;
+            padding-top: 18px;
+            padding-bottom: 20px;
+        }
+
         &__title {
             color: #040D16;
             font-family: Inter;
@@ -40,6 +62,13 @@
             font-weight: 600;
             line-height: normal;
             opacity: .8;
+
+            @media screen and (max-width:770px) {
+
+                font-size: 16px;
+
+            }
+
         }
 
         &__text {
@@ -50,6 +79,8 @@
             font-weight: 500;
             line-height: normal;
             opacity: .4;
+
+
         }
     }
 
@@ -61,5 +92,16 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+        @media screen and (max-width:770px) {
+            color: #040D16;
+
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
     }
 }

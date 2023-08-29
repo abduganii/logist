@@ -1,8 +1,18 @@
+import { useGetWindowWidth } from "../../hooks/useGetWindowWith"
 import Container from "../container"
 import cls from "./statistic.module.scss"
 
 export default function Statistic() {
+  const widthwindow = useGetWindowWidth()
   return (
+
+    <>
+        {
+        widthwindow < 801 ?
+            <div className={cls.Statistic__img}>
+            <img src="/images/image7.png" alt="img"/>
+          </div>:""
+      }
           <Container className={cls.Statistic__Container}>
           <div className={cls.Statistic__left}>
               <div>
@@ -17,8 +27,14 @@ export default function Statistic() {
                 <h3 className={cls.Statistic__title}>15</h3> 
                 <p className={cls.Statistic__text}>Завоевано наград</p>
               </div>
-            </div>
+      </div>
+      
+      {
+        widthwindow > 800 ?
+            <div className={cls.Statistic__img}>
             <img src="/images/image7.png" alt="img"/>
+          </div>:""
+      }
           <div className={cls.Statistic__right}>
                 <div>
                 <h3 className={cls.Statistic__title}>5</h3> 
@@ -34,5 +50,6 @@ export default function Statistic() {
               </div>
             </div>
           </Container>
+    </>
   )
 }

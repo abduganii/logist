@@ -4,6 +4,17 @@
     width: calc((100% - 24px) / 2);
     padding: 57px 49px;
     padding-right: 73px;
+    text-align: center;
+
+    @media screen and (max-width:1000px) {
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    @media screen and (max-width:450px) {
+        padding: 30px 19px;
+    }
 
     &__title {
         color: #040D16;
@@ -14,22 +25,24 @@
         line-height: normal;
         text-transform: uppercase;
         width: 100%;
-        max-width: 323px;
+        max-width: 400px;
+        margin-bottom: 60px;
+
+        @media screen and (max-width:680px) {
+            margin: 0 auto;
+            margin-bottom: 30px;
+            max-width: 254px;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+
+        }
+
     }
 
-    &__text {
-        color: #040D16;
-        font-family: Inter;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-        opacity: 0.6;
-        margin-top: 12px;
-        margin-bottom: 53px;
-        width: 100%;
-        max-width: 347px;
-    }
+
 
     &__form {
         display: flex;
@@ -44,6 +57,11 @@
         background: #FFF;
         padding: 21px 20px;
         width: calc((100% - 3px) / 2);
+
+
+        @media screen and (max-width:680px) {
+            width: 100%;
+        }
 
         &:nth-child(5) {
             width: 100%;

@@ -4,6 +4,15 @@
     width: calc((100% - 24px) / 2);
     padding: 57px 50px;
 
+    @media screen and (max-width:1000px) {
+        width: 100%;
+
+    }
+
+    @media screen and (max-width:450px) {
+        padding: 30px 19px;
+    }
+
     &__title {
         color: #040D16;
         font-family: Inter;

@@ -25,7 +25,9 @@ export default function Home() {
 
               <button className={cls.Home__content__btn}>Расчитать стоимость груза</button>
           </div>
-            <img className={cls.Home__content__img} src="/Group1.png" alt="img" />
+            <div className={cls.Home__content__img}>
+            <img  src="/Group1.png" alt="img" />
+            </div>
           </div>
           
           <div className={cls.Home__serive} id="Service">
@@ -37,12 +39,15 @@ export default function Home() {
       </div>
       
       <FlyTime />
-      <Container className={cls.Home__contentUs} > 
-       <Requies />
-           <FAQ/>
+   
+      <Container  > 
+        <div className={cls.Home__contentUs}>
+        <Requies />
+          <FAQ/>
+      </div>
    
       </Container>
-      
+     
       <div className={cls.Home__aboutUs} id="aboutus">
         <Container>
           <h3 className={cls.Home__aboutUs__title}>О КОМПАНИИ</h3>
@@ -54,6 +59,7 @@ export default function Home() {
           </div>
         </Container>
       </div>
+       
       <div className={cls.Home__Advantage} id="Advantage">
         <Container>
         <h3 className={cls.Home__Advantage__title}>ПриуМщество</h3>
@@ -68,9 +74,9 @@ export default function Home() {
           </div>
       </Container>
       </div>
-
+  
       <Statistic />
-      
+  
       <div className={cls.Home__Partnors__Container} >
       <Container >
       
@@ -83,7 +89,7 @@ export default function Home() {
       </Container>
 
       </div>
-  
+       
       <div className={cls.Home__Add}>
         <Container className={cls.Home__Add__Container} >
           <div className={cls.Home__Add__content}>
@@ -92,7 +98,9 @@ export default function Home() {
             <p className={cls.Home__Add__text}>Узбекистан, г. Ташкент 700106, Учтепинский район, улица Лутфий, 13 квартал 23 дом</p>
           </div>
 
+          <div className={cls.Home__Add__img}>
           <img src="/images/image8.png" alt="img" />
+         </div>
         </Container>
           </div>
       <Footer/>
