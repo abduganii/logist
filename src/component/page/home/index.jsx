@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import AdvantageCard from "../../UI/cards/advantage";
 import ServiceCard from "../../UI/cards/service";
 import Container from "../../UI/container";
@@ -12,6 +13,8 @@ import { Advantage, Lagos, Service } from "./data";
 import cls from "./home.module.scss"
 
 export default function Home() {
+  const { i18n } = useTranslation()
+  const { t } = useTranslation(['common'])
   return (
     <>
       <div className={cls.Home__hero} id="global">
@@ -19,11 +22,13 @@ export default function Home() {
         <Container>
         <div className={cls.Home__content}>
           <div className={cls.Home__content__left}>
-            <h3 className={cls.Home__content__span}>Мы обеспечиваем высочайшее качество</h3>
-            <h2 className={cls.Home__content__title}>ГРУЗОВЫЕ УСЛУГИ</h2>
-            <p className={cls.Home__content__text}> Хороший план, насильственно реализованный сейчас, лучше, чем идеальный план, реализованный на следующей неделе.</p>
+              <h3 className={cls.Home__content__span}>{ t('HomeSpan')}</h3>
+            <h2 className={cls.Home__content__title}>{ t('HomeTitle')}</h2>
+            <p className={cls.Home__content__text}> { t('HomeText')}</p>
 
-              <button className={cls.Home__content__btn}>Расчитать стоимость груза</button>
+              <div>
+              <a  link='/#quation' className={cls.Home__content__btn}>{ t('HomeBtn')}</a>
+            </div>
           </div>
             <div className={cls.Home__content__img}>
             <img  src="/Group1.png" alt="img" />
@@ -31,13 +36,13 @@ export default function Home() {
           </div>
           
           <div className={cls.Home__serive} id="Service">
-            {Service?.map(e => (
+            {Service?.[i18n.language].map(e => (
               <ServiceCard key={e?.id} title={e?.title} img={ e?.img} />
             ))}
           </div>
      </Container>
       </div>
-      
+    
       <FlyTime />
    
       <Container  > 
@@ -50,24 +55,22 @@ export default function Home() {
      
       <div className={cls.Home__aboutUs} id="aboutus">
         <Container>
-          <h3 className={cls.Home__aboutUs__title}>О КОМПАНИИ</h3>
+          <h3 className={cls.Home__aboutUs__title}>{ t('aboutTilte')}</h3>
           <div className={cls.Home__aboutUs__wrap}>
-            <p className={cls.Home__aboutUs__text}>Наша компания образована в 2015 году группой единомышленников, каждый из которых уже имел значительный опыт в сфере международных перевозок и таможенного дела.
-            DREAM-TEAM–LOGISTICS» выражает вам своё почтение и уважение и предлагает услуги по перевозкам автомобильным транспортом по всей Республике Узбекистана и за её пределами.</p>
-            <p className={cls.Home__aboutUs__text}>Имея в наличии собственный автопарк, представленный не только грузовыми автотранспортными средствами, но и специализированной техникой, и квалифицированный водительский состав, а также привлечённый автопарк «DREAM-TEAM–LOGISTICS» выполняет заказы по перевозке разнообразной продукции и сырья.
-            Будем рады сотруднисать с вами.   </p>
+            <p className={cls.Home__aboutUs__text}>{t('aboutText1')}</p>
+            <p className={cls.Home__aboutUs__text}>{t('aboutText2')}</p>
           </div>
         </Container>
       </div>
        
       <div className={cls.Home__Advantage} id="Advantage">
         <Container>
-        <h3 className={cls.Home__Advantage__title}>ПриуМщество</h3>
-          <p className={cls.Home__Advantage__text}>Возможность обращения покупателя за вашим товаром на постоянной основе</p>
+          <h3 className={cls.Home__Advantage__title}>{ t('AdvantageTitle')}</h3>
+          <p className={cls.Home__Advantage__text}>{t('AdvantageText')}</p>
           
           <div className={cls.Home__Advantage__wrap}>
             {
-              Advantage?.map(e => (
+              Advantage?.[i18n.language].map(e => (
                 <AdvantageCard key={e?.id} text={e?.text} title={ e?.title} img={e?.img}  />
               ))
             }
@@ -80,7 +83,7 @@ export default function Home() {
       <div className={cls.Home__Partnors__Container} >
       <Container >
       
-        <h3 className={cls.Home__Partnors__title}>Наши клиенты</h3>
+          <h3 className={cls.Home__Partnors__title}>{ t('Partnors')}</h3>
         <div className={cls.Home__Partnors__wrap}>
           {Lagos?.map(e => (
               <img key={e?.id} src={e?.img} alt="img" />
@@ -93,9 +96,8 @@ export default function Home() {
       <div className={cls.Home__Add}>
         <Container className={cls.Home__Add__Container} >
           <div className={cls.Home__Add__content}>
-            <h3 className={cls.Home__Add__title}>Автомобильные
-              грузо-перевозки</h3>
-            <p className={cls.Home__Add__text}>Узбекистан, г. Ташкент 700106, Учтепинский район, улица Лутфий, 13 квартал 23 дом</p>
+            <h3 className={cls.Home__Add__title}>{t('plusTitle')}</h3>
+            <p className={cls.Home__Add__text}>{t('plusText')}</p>
           </div>
 
           <div className={cls.Home__Add__img}>

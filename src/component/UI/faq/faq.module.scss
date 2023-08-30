@@ -38,16 +38,42 @@
     }
 
     &__quation {
-        color: #040D16;
-        font-family: Inter;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 128%;
+
         padding: 19px 20px;
         border-radius: 10px;
         background: #F2F2F2;
         cursor: pointer;
         margin-bottom: 5px;
+
+
+        p:nth-child(1) {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 128%;
+        }
+
+        p:nth-child(2) {
+            height: 0;
+            color: #040D16;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            overflow: hidden;
+            opacity: .6;
+
+        }
+    }
+
+    &__an {
+
+        overflow: auto;
+        height: 100% !important;
+        margin-top: 14px;
+        margin-bottom: 48px;
     }
 }

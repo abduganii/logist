@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next"
 import { useGetWindowWidth } from "../../hooks/useGetWindowWith"
 import Container from "../container"
 import cls from "./statistic.module.scss"
 
 export default function Statistic() {
   const widthwindow = useGetWindowWidth()
+  const { t } = useTranslation(['common'])
   return (
 
     <>
@@ -17,15 +19,15 @@ export default function Statistic() {
           <div className={cls.Statistic__left}>
               <div>
                 <h3 className={cls.Statistic__title}>18</h3> 
-                <p className={cls.Statistic__text}>Лет на рынке</p>
+            <p className={cls.Statistic__text}>{t('StatisticYear') }</p>
               </div>
               <div>
                 <h3 className={cls.Statistic__title}>80</h3> 
-                <p className={cls.Statistic__text}>Работники в команде</p>
+                <p className={cls.Statistic__text}>{t('StatisticGruop') }</p>
               </div>
               <div>
                 <h3 className={cls.Statistic__title}>15</h3> 
-                <p className={cls.Statistic__text}>Завоевано наград</p>
+                <p className={cls.Statistic__text}>{t('StatisticPlus') }</p>
               </div>
       </div>
       
@@ -38,15 +40,15 @@ export default function Statistic() {
           <div className={cls.Statistic__right}>
                 <div>
                 <h3 className={cls.Statistic__title}>5</h3> 
-                <p className={cls.Statistic__text}>Наши филиалы</p>
+                <p className={cls.Statistic__text}>{t('StatisticFil') }</p>
               </div>
               <div>
                 <h3 className={cls.Statistic__title}>50+</h3> 
-                <p className={cls.Statistic__text}>Постоянных клиентов</p>
+                <p className={cls.Statistic__text}>{t('StatisticClient') }</p>
               </div>
               <div>
                 <h3 className={cls.Statistic__title}>1.2к</h3> 
-                <p className={cls.Statistic__text}>Доставленные товары</p>
+                <p className={cls.Statistic__text}>{t('StatisticGood') }</p>
               </div>
             </div>
           </Container>
