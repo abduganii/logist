@@ -7,17 +7,17 @@ export const Service = [
   {
     id: 2,
     title: "Железнодорожные перевозки",
-    img: "/images/image1.png",
+    img: "/images/image11.png",
   },
   {
     id: 3,
-    title: "Томоженное оформление",
-    img: "/images/image1.png",
+    title: "Авиаперевозки",
+    img: "/images/image12.png",
   },
   {
     id: 4,
-    title: "Авиаперевозки",
-    img: "/images/image1.png",
+    title: "Томоженное оформление",
+    img: "/images/image13.png",
   },
 ];
 

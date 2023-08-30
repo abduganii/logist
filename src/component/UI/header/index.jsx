@@ -12,6 +12,17 @@ export default function Header() {
   return (
     <Container >
 
+      
+      {
+        open ?  <div className={cls.Header__madal}>
+        <a href='/#global' onClick={()=>setOpen(false)}>Главная</a>   
+          <a href='/#Service' onClick={()=>setOpen(false)}>Сервисы</a>   
+          <a href='/#aboutus' onClick={()=>setOpen(false)}>О компании</a>   
+          <a href='/#Advantage' onClick={()=>setOpen(false)}>Примущество</a>   
+          <a href='/#quation' onClick={()=>setOpen(false)}>Вопросы и ответы</a>   
+          <a href='/#content' onClick={()=>setOpen(false)}>Контакты</a> 
+      </div>:""
+       }
       {
         widthwindow < 691 ?   <div className={cls.Header__contact}>
         <a href='/'><Insta/></a>
@@ -51,7 +62,13 @@ export default function Header() {
             <li className={cls.Header__language__text}>English</li>   
           </ul> :
             <div className={cls.Header__language__btn}>
-              <Language/> Ру
+              <Language /> Ру
+              
+              <ul className={cls.Header__language__madal}>
+                <li className={cls.Header__language__madal__text}>Russian</li> 
+                <li className={cls.Header__language__madal__text}>English</li> 
+                <li className={cls.Header__language__madal__text}>O’zbekcha</li> 
+              </ul>
            </div> 
             
           }
