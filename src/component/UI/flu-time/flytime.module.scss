@@ -87,11 +87,18 @@
     &__time {
         color: #040D16;
         text-align: center;
-        font-family: Inter;
+        font-family: "DS-Digital";
         font-size: 80px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+        span {
+            animation-duration: .8s;
+            animation-name: test;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
 
         @media screen and (max-width:770px) {
             color: #040D16;
@@ -103,5 +110,19 @@
             letter-spacing: 3px;
             margin-bottom: 16px;
         }
+    }
+}
+
+@keyframes test {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+    opacity: 1;
+}
+
+    100% {
+        opacity: 0;
     }
 }

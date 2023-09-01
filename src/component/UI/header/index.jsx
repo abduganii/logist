@@ -28,11 +28,11 @@ export default function Header() {
        }
       {
         widthwindow < 691 ?   <div className={cls.Header__contact}>
-        <a href='/'><Insta/></a>
-        <a href="/"><Telegram/></a>
-        <a href="/"><Facebok/></a>
+        <a  target="_blank" href='https://instagram.com/dk_logistics._'><Insta/></a>
+        <a target="_blank" href="https://t.me/DK_Logistics_uz"><Telegram/></a>
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=61550761592256"><Facebok/></a>
         <a href="tel:+998980775225">+998 98 077 52 25</a>
-        <a href="mailto:abc@example.com">Email: Info@gmail.com</a>
+        <a href="mailto:dk.logistics.sup@gmail.com">Email: Info@gmail.com</a>
           
         </div> :
           ""
@@ -49,28 +49,36 @@ export default function Header() {
             <img src="/logo.svg" alt="logo"  />      
         {
             widthwindow> 690 ?   <div className={cls.Header__contact}>
-            <a href='/'><Insta/></a>
-            <a href="/"><Telegram/></a>
-            <a href="/"><Facebok/></a>
+            <a target="_blank" href='https://instagram.com/dk_logistics._'><Insta/></a>
+            <a target="_blank" href="https://t.me/DK_Logistics_uz"><Telegram/></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61550761592256"><Facebok/></a>
             <a href="tel:+998980775225">+998 98 077 52 25</a>
-            <a href="mailto:abc@example.com">Email: Info@gmail.com</a>
+            <a href="mailto:dk.logistics.sup@gmail.com">Email: Info@gmail.com</a>
               
           </div>: ""
           }
         {
           widthwindow > 910 ||widthwindow <  690 && widthwindow > 500 ?
           <ul className={cls.Header__language}>
-          <li  onClick={() => i18n.changeLanguage('ru')} className={cls.Header__language__madal__text}>Русский</li> 
-                <li onClick={() => i18n.changeLanguage('en')} className={cls.Header__language__madal__text}>English</li> 
-                <li onClick={() => i18n.changeLanguage('uz')} className={cls.Header__language__madal__text}>O’zbekcha</li>  
+              <li onClick={() => i18n.changeLanguage('ru')}
+                className={`${cls.Header__language__madal__text} ${i18n.language == "ru" ? cls.Header__language__madal__activetext :""}`}
+              >Русский</li> 
+              <li
+                onClick={() => i18n.changeLanguage('en')}
+                className={`${cls.Header__language__madal__text} ${i18n.language == "en" ? cls.Header__language__madal__activetext :""}`}
+              >English</li> 
+              <li
+                onClick={() => i18n.changeLanguage('uz')}
+                className={`${cls.Header__language__madal__text} ${i18n.language == "uz" ? cls.Header__language__madal__activetext :""}`}
+              >O’zbekcha</li>  
           </ul> :
             <div className={cls.Header__language__btn}>
               <Language /> {t('lang')}
               
               <ul className={cls.Header__language__madal}>
-                <li  onClick={() => i18n.changeLanguage('ru')} className={cls.Header__language__madal__text}>Русский</li> 
-                <li onClick={() => i18n.changeLanguage('en')} className={cls.Header__language__madal__text}>English</li> 
-                <li onClick={() => i18n.changeLanguage('uz')} className={cls.Header__language__madal__text}>O’zbekcha</li> 
+                <li  onClick={() => i18n.changeLanguage('ru')} className={`${cls.Header__language__madal__text} ${i18n.language == "ru" ? cls.Header__language__madal__activetext :""}`}>Русский</li> 
+                <li onClick={() => i18n.changeLanguage('en')} className={`${cls.Header__language__madal__text} ${i18n.language == "en" ? cls.Header__language__madal__activetext :""}`}>English</li> 
+                <li onClick={() => i18n.changeLanguage('uz')} className={`${cls.Header__language__madal__text} ${i18n.language == "uz" ? cls.Header__language__madal__activetext :""}`}>O’zbekcha</li> 
               </ul>
            </div> 
             

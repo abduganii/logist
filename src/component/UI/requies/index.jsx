@@ -1,22 +1,42 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import cls from "./requies.module.scss"
+import { useForm } from 'react-hook-form'
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Requies() {
   const { t } = useTranslation(['common'])
-  return (
-    <form className={cls.Requies} id="quation">
-      <h2 className={cls.Requies__title}>{ t('RequiesTitle')}</h2>
 
+  const { register, handleSubmit, reset } = useForm();
+
+
+  const AddData = (data) => {
+    const mydata = `New meggesi: ${t('RequiesGr')} - ${data?.Gr}; ${t('RequiesAllGr')} - ${data?.AllGr}; ${t('RequiesName')} - ${data?.name}; ${t('RequiesTel')} - ${data?.tel}; ${t('RequiesDetal')} - ${data?.text}` 
+    const token = "5912567868:AAGbkDrOSc-kYqjbVE7UOWfUfzq3fiofwIw"
+    const catId = 945159848
+
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${catId}&text=${mydata}`
+    const api = new XMLHttpRequest()
+    api.open("GET", url, true)
+    api.send();
+    toast("Message sended")
+    reset()
+
+  }
+  return (
+    <form className={cls.Requies} id="quation" onSubmit={handleSubmit(AddData)}>
+      <h2 className={cls.Requies__title}>{ t('RequiesTitle')}</h2>
           <div className={cls.Requies__form}>
-              <input className={cls.Requies__input} placeholder={ t('RequiesGr')} type="text" />
-              <input className={cls.Requies__input} placeholder={ t('RequiesAllGr')} type="text" />
-              <input className={cls.Requies__input} placeholder={ t('RequiesNmae')} type="text" />
-              <input className={cls.Requies__input} placeholder={ t('RequiesTel')} type="text" />
-              <textarea className={cls.Requies__input}  placeholder={ t('RequiesDetal')} ></textarea>
+              <input className={cls.Requies__input} placeholder={ t('RequiesGr')} type="text" { ...register('Gr') } />
+              <input className={cls.Requies__input} placeholder={ t('RequiesAllGr')} type="text"  { ...register('AllGr') }/>
+              <input className={cls.Requies__input} placeholder={ t('RequiesName')} type="text"{ ...register('name') } />
+              <input className={cls.Requies__input} placeholder={ t('RequiesTel')} type="text"{ ...register('tel') } />
+              <textarea className={cls.Requies__input}  placeholder={ t('RequiesDetal')} { ...register('text') } ></textarea>
           </div>
 
-          <button className={cls.Requies__btn} type='submit'>{ t('RequiesBtn')}</button>
+      <button className={cls.Requies__btn} type='submit'>{t('RequiesBtn')}</button>
+      
+      <Toaster/>
     </form>
   )
 }

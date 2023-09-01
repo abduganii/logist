@@ -152,8 +152,8 @@
 
 
 
-            li {
-                color: #FFF;
+            &__text {
+                color: #DDD;
                 font-family: "Inter";
                 font-size: 18px;
                 font-style: normal;
@@ -162,7 +162,13 @@
                 margin-bottom: 10px;
                 text-align: center;
                 cursor: pointer;
+                opacity: .4;
 
+            }
+
+            &__activetext {
+                color: #FFF !important;
+                opacity: 1;
             }
         }
     }

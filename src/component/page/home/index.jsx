@@ -27,7 +27,7 @@ export default function Home() {
             <p className={cls.Home__content__text}> { t('HomeText')}</p>
 
               <div>
-              <a  link='/#quation' className={cls.Home__content__btn}>{ t('HomeBtn')}</a>
+              <a  href='/#quation' className={cls.Home__content__btn}>{ t('HomeBtn')}</a>
             </div>
           </div>
             <div className={cls.Home__content__img}>

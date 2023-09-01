@@ -40,3 +40,11 @@
 
 
 
+@font-face {
+    font-family: "DS-Digital";
+    src: url("/fonts/9066-fontps.ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
