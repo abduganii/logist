@@ -10,10 +10,11 @@ export default function Requies() {
   const { register, handleSubmit, reset } = useForm();
 
 
+
   const AddData = (data) => {
     const mydata = `New meggesi: ${t('RequiesGr')} - ${data?.Gr}; ${t('RequiesAllGr')} - ${data?.AllGr}; ${t('RequiesName')} - ${data?.name}; ${t('RequiesTel')} - ${data?.tel}; ${t('RequiesDetal')} - ${data?.text}` 
-    const token = "5912567868:AAGbkDrOSc-kYqjbVE7UOWfUfzq3fiofwIw"
-    const catId = 945159848
+    const token = "6171366961:AAEiCKtkELm3uVjmNg2qRPA7TTSfUaEmnqE"
+    const catId = -1001690827818
 
     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${catId}&text=${mydata}`
     const api = new XMLHttpRequest()
