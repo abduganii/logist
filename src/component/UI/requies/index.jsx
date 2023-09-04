@@ -29,9 +29,9 @@ export default function Requies() {
       <h2 className={cls.Requies__title}>{ t('RequiesTitle')}</h2>
           <div className={cls.Requies__form}>
               <input className={cls.Requies__input} placeholder={ t('RequiesGr')} type="text" { ...register('Gr') } />
-              <input className={cls.Requies__input} placeholder={ t('RequiesAllGr')} type="text"  { ...register('AllGr') }/>
-              <input className={cls.Requies__input} placeholder={ t('RequiesName')} type="text"{ ...register('name') } />
-              <input className={cls.Requies__input} placeholder={ t('RequiesTel')} type="text"{ ...register('tel') } />
+              <input className={cls.Requies__input} placeholder={ t('RequiesAllGr')} type="text"  { ...register('AllGr',{required:true}) }/>
+              <input className={cls.Requies__input} placeholder={ t('RequiesName')} type="text"{ ...register('name',{required:true}) } />
+              <input className={cls.Requies__input} placeholder={ t('RequiesTel')} type="text"{ ...register('tel',{required:true}) } />
               <textarea className={cls.Requies__input}  placeholder={ t('RequiesDetal')} { ...register('text') } ></textarea>
           </div>
 

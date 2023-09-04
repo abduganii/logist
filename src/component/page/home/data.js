@@ -89,7 +89,7 @@ export const Advantage = {
     },
     {
       id: 4,
-      title: "ЭКСПЕРТИЗА",
+      title: "ЭКСПЕРТНОСТЬ",
       text: "Высокий профессионализм и опыт, наработанный годами",
       img: "/images/image6.png",
     },
@@ -124,7 +124,7 @@ export const Advantage = {
     {
       id: 1,
       title: "Shaffoflik",
-      text: "Barcha qaytariladigan xizmatlar komissiyasiz qayta to'lanadi",
+      text: "Barcha xizmatlar kelishuv asosida  bajariladi, ortiqcha tolovlarsiz",
       img: "/images/image3.png",
     },
     {
