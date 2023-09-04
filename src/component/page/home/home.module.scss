@@ -160,6 +160,7 @@
             margin-top: 37px;
             animation: glowing 2300ms infinite;
             cursor: pointer;
+
             @media screen and (max-width:770px) {
                 margin-bottom: 38px;
             }
@@ -375,7 +376,6 @@
             }
         }
 
-        padding-bottom: 49px;
         background-color: #049874;
 
         &__title {
@@ -427,7 +427,20 @@
         }
 
         &__img {
+            width: 100%;
             max-width: 787px;
+            position: relative;
+
+            div {
+                width: 45%;
+                height: 34%;
+                border-bottom-right-radius: 50px;
+                background-color: #049874;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+            }
 
             img {
                 width: 100%;

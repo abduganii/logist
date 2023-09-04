@@ -38,6 +38,6 @@ jobs:
           script: |
             cd /home/user/getter/dashakin
             git stash
-            git pull origin test
+            git pull origin main
             npm install --yes --legacy-peer-deps
             npm run build

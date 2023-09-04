@@ -101,7 +101,8 @@ export default function Home() {
           </div>
 
           <div className={cls.Home__Add__img}>
-          <img src="/images/image8.png" alt="img" />
+            <div></div>
+          <img src="/images/car.gif" alt="img" />
          </div>
         </Container>
           </div>

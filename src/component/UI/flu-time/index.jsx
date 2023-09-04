@@ -46,8 +46,10 @@ export default function FlyTime() {
          
         </Container>
         <div className={cls.FlyTime__Images}>
-              <img src="/images/image9.png" alt="img" />
-              <img src="/images/image10.png" alt="img" />
+        {widthwindow >600?
+              <img src="/images/image14.png" alt="img" />:
+            <img src="/images/imga.jpg" alt="img" />
+          }
           </div>
       </div>
   </div>
