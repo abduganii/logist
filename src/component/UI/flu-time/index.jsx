@@ -1,4 +1,5 @@
 
+import axios from 'axios'
 import moment from 'moment'
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -38,26 +39,31 @@ export default function FlyTime(date) {
   const [timer, setTimer] = useState({})
   
   useEffect(() => {
-    var endDate = moment('2023-09-10');
-    
-    var countdown = setInterval(function() {
-      var now = moment();
-    var diff = endDate.diff(now);
-    var duration = moment.duration(diff);
-    var days = duration.days();
-    var hours = duration.hours();
-    var minutes = duration.minutes();
-    var seconds = duration.seconds();
-    
-    if (diff <= 0) {
-      clearInterval(countdown);
-    }
-
-    setTimer({days, hours, minutes, seconds})
-  }, 1000);
-    
-  }, [])
-  return (
+    axios.get('https://api.telegram.org/bot6636063770:AAGshZ85wqq4re-ztrPE2Wusi5lw6jwifUQ/getUpdates?offset=-1')
+      .then(res => {
+        const msg = res?.data.result || []
+        const message = msg[msg?.length - 1]
+        const text = message?.channel_post?.text
+        var endDate = moment(text || Date.now());
+        
+        var countdown = setInterval(function() {
+          var now = moment();
+          var diff = endDate.diff(now);
+          var duration = moment.duration(diff);
+          var days = duration.days();
+          var hours = duration.hours();
+          var minutes = duration.minutes();
+          var seconds = duration.seconds();
+          
+          if (diff <= 0) {
+            clearInterval(countdown);
+          }
+          
+          setTimer({days, hours, minutes, seconds})
+        }, 1000);
+      })
+      }, [])
+      return (
     <div className={cls.FlyTime}>
       <div className={cls.FlyTime__back}>
         <Container >
