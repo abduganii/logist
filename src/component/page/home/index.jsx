@@ -23,7 +23,8 @@ export default function Home() {
         <div className={cls.Home__content}>
           <div className={cls.Home__content__left}>
               <h3 className={cls.Home__content__span}>{ t('HomeSpan')}</h3>
-            <h2 className={cls.Home__content__title}>{ t('HomeTitle')}</h2>
+              <h2 className={cls.Home__content__title}>{t('HomeTitle')}</h2>
+              
             <p className={cls.Home__content__text}> { t('HomeText')}</p>
 
               <div>
