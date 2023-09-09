@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import cls from "./requies.module.scss"
 import { useForm } from 'react-hook-form'
 import toast, { Toaster } from 'react-hot-toast';
-
+import ReactInputMask from 'react-input-mask'
 export default function Requies() {
   const { t } = useTranslation(['common'])
 
@@ -31,7 +31,7 @@ export default function Requies() {
               <input className={cls.Requies__input} placeholder={ t('RequiesGr')} type="text" { ...register('Gr') } />
               <input className={cls.Requies__input} placeholder={ t('RequiesAllGr')} type="text"  { ...register('AllGr',{required:true}) }/>
               <input className={cls.Requies__input} placeholder={ t('RequiesName')} type="text"{ ...register('name',{required:true}) } />
-              <input className={cls.Requies__input} placeholder={ t('RequiesTel')} type="text"{ ...register('tel',{required:true}) } />
+              <ReactInputMask    mask="+\9\9\8 (99) 999-99-99" className={cls.Requies__input} placeholder={ t('RequiesTel')} type="text"{ ...register('tel',{required:true}) } />
               <textarea className={cls.Requies__input}  placeholder={ t('RequiesDetal')} { ...register('text') } ></textarea>
           </div>
 
