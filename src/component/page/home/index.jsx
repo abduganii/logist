@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import AdvantageCard from "../../UI/cards/advantage";
 import ServiceCard from "../../UI/cards/service";
@@ -11,12 +11,15 @@ import Requies from "../../UI/requies";
 import Statistic from "../../UI/statistic";
 import { Advantage, Lagos, Service } from "./data";
 import cls from "./home.module.scss"
+import sample from "/images/viode.mp4"
 
 export default function Home() {
   const { i18n } = useTranslation()
   const { t } = useTranslation(['common'])
+ 
   return (
     <>
+      {/* <div  className={`${open? cls.Home__wrap:""}`}></div> */}
       <div className={cls.Home__hero} id="global">
         <Header />
         <Container>
@@ -38,7 +41,7 @@ export default function Home() {
           
           <div className={cls.Home__serive} id="Service">
             {Service?.[i18n.language].map(e => (
-              <ServiceCard key={e?.id} title={e?.title} img={ e?.img} />
+              <ServiceCard   key={e?.id} title={e?.title} img={ e?.img} />
             ))}
           </div>
      </Container>
@@ -95,18 +98,12 @@ export default function Home() {
       </div>
        
       <div className={cls.Home__Add}>
-        <Container className={cls.Home__Add__Container} >
-          <div className={cls.Home__Add__content}>
-            <h3 className={cls.Home__Add__title}>{t('plusTitle')}</h3>
-            <p className={cls.Home__Add__text}>{t('plusText')}</p>
-          </div>
 
-          <div className={cls.Home__Add__img}>
-            <div></div>
-          <img src="/images/car.gif" alt="img" />
-         </div>
-        </Container>
-          </div>
+
+        <video className={cls.Home__Add__vidoe} autoPlay loop muted>
+          <source src={sample} type='video/mp4' />
+        </video>
+      </div>
       <Footer/>
     </>
   );

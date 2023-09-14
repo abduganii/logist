@@ -177,6 +177,10 @@
             margin-top: 10px;
         }
 
+        // &__card {
+    //     transform: scale3d(2);
+    // }
+
     }
 
     &__aboutUs {
@@ -365,87 +369,49 @@
     }
 
     &__Add {
-        &__Container {
+        position: relative;
+        width: 100%;
+        height: 1000px;
 
-            display: flex;
-            align-items: center;
-
-
-            @media screen and (max-width:620px) {
-                flex-direction: column;
-            }
+        @media screen and (max-width:1540px) {
+            height: 800px;
         }
 
-        background-color: #049874;
+        @media screen and (max-width:1300px) {
+            height: 600px;
+        }
 
-        &__title {
+        @media screen and (max-width:1040px) {
+            height: 500px;
+        }
+
+        @media screen and (max-width:840px) {
+            height: 450px;
+        }
+
+        @media screen and (max-width:700px) {
+            height: 400px;
+        }
+
+        @media screen and (max-width:650px) {
+            height: 300px;
+        }
+
+        @media screen and (max-width:480px) {
+            height: 240px;
+        }
+
+
+
+        &__vidoe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 395px;
-            color: #FFF;
-            font-family: Inter;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: 800;
-            line-height: 35px;
-
-            @media screen and (max-width:900px) {
-                font-size: 24px;
-                line-height: 27px;
-            }
-
-            @media screen and (max-width:620px) {
-                max-width: 100%;
-                margin-top: 38px;
-                text-align: center;
-            }
+            height: 100%;
+            object-fit: cover;
         }
 
-        &__text {
-            width: 100%;
-            max-width: 455px;
-            color: #FFF;
-            font-family: Inter;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            opacity: 0.6;
-            margin-top: 19px;
-
-
-
-            @media screen and (max-width:900px) {
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 500;
-            }
-
-            @media screen and (max-width:620px) {
-                text-align: center;
-                margin-bottom: 14px;
-            }
-        }
-
-        &__img {
-            width: 100%;
-            max-width: 787px;
-            position: relative;
-
-            div {
-                width: 45%;
-                height: 34%;
-                border-bottom-right-radius: 50px;
-                background-color: #049874;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-            }
-
-            img {
-                width: 100%;
-            }
-        }
     }
 }
 

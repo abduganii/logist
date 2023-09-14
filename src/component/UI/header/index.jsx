@@ -53,7 +53,7 @@ export default function Header() {
             <a target="_blank" href="https://t.me/DK_Logistics_uz"><Telegram/></a>
             <a target="_blank" href="https://www.facebook.com/profile.php?id=61550761592256"><Facebok/></a>
             <a href="tel:+998980775225">+998 98 077 52 25</a>
-            <a href="mailto:dk.logistics.sup@gmail.com">Email: Info@gmail.com</a>
+            <a href="mailto:dk.logistics.sup@gmail.com">Email: dk.logistics.sup@gmail.com</a>
               
           </div>: ""
           }
