@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import cls from "./service.module.scss"
 
 export default function ServiceCard({ title, img }) {
@@ -8,7 +8,6 @@ export default function ServiceCard({ title, img }) {
           <h3 className={cls.ServiceCard__title}>{ title}</h3>
           <img src={img} alt="img" />
       
-        <div className={cls.ServiceCard__wrap}> hello</div>
     </div>
   )
 }
