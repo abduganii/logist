@@ -163,15 +163,15 @@ export const Advantage = {
 export const Lagos = [
   {
     id: 1,
-    img: "/logos/image1.png",
+    img: "/logos/image14.png",
   },
   {
     id: 2,
-    img: "/logos/image2.png",
+    img: "/logos/image15.png",
   },
   {
     id: 3,
-    img: "/logos/image3.png",
+    img: "/logos/image16.png",
   },
   {
     id: 4,
