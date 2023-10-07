@@ -35,7 +35,7 @@ export default function Home() {
             </div>
           </div>
             <div className={cls.Home__content__img}>
-            <img  src="/Group1.png" alt="img" />
+            <img  src="/Group1.png" alt="imges" />
             </div>
           </div>
           
