@@ -23,7 +23,7 @@ export default function Header() {
           <a href='/#aboutus' onClick={()=>setOpen(false)}>{t('AboutCompany')}</a>   
           <a href='/#Advantage' onClick={()=>setOpen(false)}>{t('advantage')}</a>   
           <a href='/#quation' onClick={()=>setOpen(false)}>{t('Questions')}</a>   
-          <a href='/#content' onClick={()=>setOpen(false)}>{t('Contacts')}</a> 
+          <a href='/#gallety' onClick={()=>setOpen(false)}>{t('Contacts')}</a> 
       </div>:""
        }
       {
@@ -92,7 +92,7 @@ export default function Header() {
             <a href='/#aboutus' className={cls.Header__navbar__text}>{t('AboutCompany')}</a>   
             <a href='/#Advantage' className={cls.Header__navbar__text}>{t('advantage')}</a>   
             <a href='/#quation' className={cls.Header__navbar__text}>{t('Questions')}</a>   
-            <a href='/#content' className={cls.Header__navbar__text}>{t('Contacts')}</a>   
+            <a href='/#gallety' className={cls.Header__navbar__text}>{t('Contacts')}</a>   
           </div>
          {widthwindow> 1100? <a className={cls.Header__btn} href="tel:+998980775225">+998 98 077 52 25</a>:""} 
         </div> :""

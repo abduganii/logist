@@ -178,9 +178,37 @@
         }
 
         // &__card {
-    //     transform: scale3d(2);
-    // }
+        //     transform: scale3d(2);
+        // }
 
+    }
+
+
+    &__gallery {
+        &__title {
+            color: #040D16;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            margin-bottom: 55px;
+        }
+
+        &__wrap {
+            margin-bottom: 67px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+
+            @media screen and (max-width:600px) {
+                justify-content: center;
+            }
+
+        }
     }
 
     &__aboutUs {
@@ -351,6 +379,17 @@
             @media screen and (max-width:800px) {
                 flex-wrap: nowrap;
                 overflow-y: scroll;
+            }
+
+            img {
+                object-fit: contain;
+                width: 180px;
+                height: 70px;
+
+                &:nth-child(2) {
+                    width: 360px;
+                    height: 140px;
+                }
             }
 
         }

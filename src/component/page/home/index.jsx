@@ -35,13 +35,13 @@ export default function Home() {
             </div>
           </div>
             <div className={cls.Home__content__img}>
-            <img  src="/Group1.png" alt="imges" />
+            <img  src="/Group1.png" alt="img" />
             </div>
           </div>
           
           <div className={cls.Home__serive} id="Service">
             {Service?.[i18n.language].map(e => (
-              <ServiceCard   key={e?.id} title={e?.title} img={ e?.img} />
+              <ServiceCard   key={e?.id} title={e?.title} img={ e?.img} dicr={e?.dicr} />
             ))}
           </div>
      </Container>
@@ -82,6 +82,15 @@ export default function Home() {
       </Container>
       </div>
   
+      <Container>
+        <h3 className={cls.Home__gallery__title} id="gallety">{t('Contacts')}</h3>
+        <div className={cls.Home__gallery__wrap}>
+          {/* <video width="240" height="436" controls >
+           <source src="/vidoe/vidoe1.mp4" type="video/mp4"/>
+          </video> */}
+          
+        </div>
+      </Container>
       <Statistic />
   
       <div className={cls.Home__Partnors__Container} >
@@ -90,7 +99,7 @@ export default function Home() {
           <h3 className={cls.Home__Partnors__title}>{ t('Partnors')}</h3>
         <div className={cls.Home__Partnors__wrap}>
           {Lagos?.map(e => (
-              <img key={e?.id} src={e?.img} alt="img" />
+              <img key={e?.id} src={e?.img} width={180} height={80} alt="img" />
             ))}
         </div>
       </Container>
@@ -98,8 +107,6 @@ export default function Home() {
       </div>
        
       <div className={cls.Home__Add}>
-
-
         <video className={cls.Home__Add__vidoe} autoPlay loop muted>
           <source src={sample} type='video/mp4' />
         </video>
