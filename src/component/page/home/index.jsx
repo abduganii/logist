@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import ReactPlayer from 'react-player/youtube'
+
 import AdvantageCard from "../../UI/cards/advantage";
 import ServiceCard from "../../UI/cards/service";
 import Container from "../../UI/container";
@@ -85,10 +87,11 @@ export default function Home() {
       <Container>
         <h3 className={cls.Home__gallery__title} id="gallety">{t('Contacts')}</h3>
         <div className={cls.Home__gallery__wrap}>
-          {/* <video width="240" height="436" controls >
-           <source src="/vidoe/vidoe1.mp4" type="video/mp4"/>
-          </video> */}
-          
+         
+           <ReactPlayer width={300} url='www.youtube.com/shorts/lV4yMv_gTgI?feature=share' />
+           <ReactPlayer width={300} url='www.youtube.com/shorts/xD2HgMlIG28?feature=share' />
+           <ReactPlayer width={300} url='www.youtube.com/shorts/HSbsfRV9hAs' />
+           <ReactPlayer width={300} url='www.youtube.com/shorts/SVhzCIAvuIk?feature=share' />
         </div>
       </Container>
       <Statistic />
